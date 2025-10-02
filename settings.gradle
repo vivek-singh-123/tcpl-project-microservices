@@ -1,1 +1,3 @@
 include 'billing-service'
+include 'project-management-service'
+include 'notification-service'

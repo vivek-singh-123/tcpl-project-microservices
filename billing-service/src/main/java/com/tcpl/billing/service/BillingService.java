@@ -163,4 +163,8 @@ public class BillingService {
             throw new RuntimeException("Failed to generate PDF: " + e.getMessage(), e);
         }
     }
+
+    public List<Invoice> findInvoicesByProjectId(Long projectId) {
+        return invoiceRepo.findByProjectId(projectId);
+    }
 }

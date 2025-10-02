@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Base64;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/invoices")
@@ -21,6 +22,17 @@ public class BillingController {
     public BillingController(BillingService billingService) {
         this.billingService = billingService;
     }
+
+    //API endpoint
+    @GetMapping
+    public ResponseEntity<List<Invoice>> getInvoicesByProject(@RequestParam(required = false) Long projectId) {
+        if (projectId == null) {
+            // Handle the case where no project ID is given, maybe return all invoices or an error
+            return ResponseEntity.badRequest().build();
+        }
+        return ResponseEntity.ok(billingService.findInvoicesByProjectId(projectId));
+    }
+
 
     // --- 1. Create Invoice ---
     @PostMapping
