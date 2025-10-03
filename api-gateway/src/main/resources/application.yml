@@ -1,0 +1,49 @@
+# Gateway Port and Name
+server:
+  port: 8000
+
+spring:
+  application:
+    name: api-gateway
+
+  cloud:
+    gateway:
+      # --- Gateway Routing Rules (Updated with http://) ---
+      routes:
+        # Rule 1: Project Management and Document Service
+        - id: project-management-service
+          uri: http://PROJECT-MANAGEMENT-SERVICE
+          predicates:
+            - Path=/api/projects/**
+            - Path=/api/documents/**
+
+        # Rule 2: Billing Service
+        - id: billing-service
+          uri: http://BILLING-SERVICE
+          predicates:
+            - Path=/api/v1/invoices/**
+
+        # Rule 3: Notification Service
+        - id: notification-service
+          uri: http://NOTIFICATION-SERVICE
+          predicates:
+            - Path=/api/notifications/**
+
+        # Rule 4: Inventory Service
+        - id: inventory-service
+          uri: http://INVENTORY-SERVICE
+          predicates:
+            - Path=/api/inventory/**
+
+        # Rule 5: Procurement Service
+        - id: procurement-service
+          uri: http://PROCUREMENT-SERVICE
+          predicates:
+            - Path=/api/purchase-requisitions/**
+            - Path=/api/purchase-orders/**
+
+# Eureka Client Configuration
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

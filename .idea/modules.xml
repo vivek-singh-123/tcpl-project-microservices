@@ -4,9 +4,13 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/billing-service/tcpl-project-microservices.billing-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/billing-service/tcpl-project-microservices.billing-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/inventory-service/tcpl-project-microservices.inventory-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/inventory-service/tcpl-project-microservices.inventory-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/inventory-service/tcpl-project-microservices.inventory-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/inventory-service/tcpl-project-microservices.inventory-service.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/notification-service/tcpl-project-microservices.notification-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/notification-service/tcpl-project-microservices.notification-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/notification-service/tcpl-project-microservices.notification-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/notification-service/tcpl-project-microservices.notification-service.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/procurement-service/tcpl-project-microservices.procurement-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/procurement-service/tcpl-project-microservices.procurement-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/procurement-service/tcpl-project-microservices.procurement-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/procurement-service/tcpl-project-microservices.procurement-service.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/project-management-service/tcpl-project-microservices.project-management-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/project-management-service/tcpl-project-microservices.project-management-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/project-management-service/tcpl-project-microservices.project-management-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/project-management-service/tcpl-project-microservices.project-management-service.test.iml" />
     </modules>
   </component>
 </project>

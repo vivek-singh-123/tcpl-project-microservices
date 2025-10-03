@@ -1,0 +1,46 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.2.4' // Using a consistent, stable version
+	id 'io.spring.dependency-management' version '1.1.4' // Using a consistent, stable version
+}
+
+// Spring Cloud ka version yahan define karte hain
+ext {
+	set('springCloudVersion', "2023.0.1")
+}
+
+group = 'com.tcpl'
+version = '0.0.1-SNAPSHOT'
+description = 'API Gateway'
+
+java {
+	sourceCompatibility = '17'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	// --- Spring Cloud Dependencies (Corrected) ---
+	implementation 'org.springframework.cloud:spring-cloud-starter-gateway'
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+
+	// --- Spring Boot ---
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	// --- Testing ---
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+// Spring Cloud ki dependencies ko manage karta hai
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
