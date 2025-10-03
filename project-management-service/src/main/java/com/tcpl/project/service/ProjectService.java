@@ -69,8 +69,8 @@ public class ProjectService {
     public ProjectDashboardResponse getProjectDashboard(Long projectId) {
         Project project = getProject(projectId);
 
-        // STEP A: Billing-Service API ko call karein
-        String billingServiceUrl = "http://localhost:8081/api/v1/invoices?projectId=" + projectId;
+        // Use the SERVICE NAME registered in Eureka. Case-insensitive, but uppercase is standard.
+        String billingServiceUrl = "http://BILLING-SERVICE/api/v1/invoices?projectId=" + projectId;
 
         List<InvoiceDTO> invoices = Collections.emptyList();
         try {

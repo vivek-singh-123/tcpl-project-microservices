@@ -22,6 +22,7 @@ public class Document {
     private String fileType;
 
     @Lob
+    @Column(name = "data", columnDefinition="LONGBLOB")
     private byte[] data;
 
     private String description;

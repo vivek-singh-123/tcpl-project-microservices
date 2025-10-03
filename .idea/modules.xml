@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/tcpl-project-microservices.iml" filepath="$PROJECT_DIR$/.idea/tcpl-project-microservices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/billing-service/tcpl-project-microservices.billing-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/billing-service/tcpl-project-microservices.billing-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/inventory-service/tcpl-project-microservices.inventory-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/inventory-service/tcpl-project-microservices.inventory-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/notification-service/tcpl-project-microservices.notification-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/notification-service/tcpl-project-microservices.notification-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/procurement-service/tcpl-project-microservices.procurement-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/procurement-service/tcpl-project-microservices.procurement-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/project-management-service/tcpl-project-microservices.project-management-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/project-management-service/tcpl-project-microservices.project-management-service.main.iml" />
     </modules>
   </component>
 </project>

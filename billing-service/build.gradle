@@ -1,7 +1,12 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '3.5.6'
-	id 'io.spring.dependency-management' version '1.1.7'
+	id 'org.springframework.boot' version '3.2.4' // Using a stable version
+	id 'io.spring.dependency-management' version '1.1.4' // Using a stable version
+}
+
+// YEH BLOCK MISSING THA - Spring Cloud ka version yahan define karte hain
+ext {
+	set('springCloudVersion', "2023.0.1")
 }
 
 group = 'com.tcpl'
@@ -30,23 +35,31 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
-	//database
+	// --- Spring Cloud ---
+	// Eureka Client dependency
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+
+	// --- Database ---
 	runtimeOnly 'com.mysql:mysql-connector-j'
 
-	//lombok
+	// --- Lombok ---
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 
-	//testing
+	// --- PDF Generation ---
+	// iText7 ka ek consolidated dependency kaafi hai
+	implementation 'com.itextpdf:itext7-core:8.0.2'
+
+	// --- Testing ---
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
 
-	// iText 7 core libraries
-	implementation 'com.itextpdf:kernel:7.2.6'
-	implementation 'com.itextpdf:layout:7.2.6'
-	implementation 'com.itextpdf:io:7.2.6'
-	implementation 'com.itextpdf:forms:7.2.6'
-
+// Yeh block Spring Cloud ki dependencies ko manage karta hai
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
 }
 
 tasks.named('test') {
